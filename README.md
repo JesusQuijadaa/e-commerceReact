@@ -8,4 +8,4 @@ PD: Aun no esta terminada.
 
 Conoce mas de mi en mis redes sociales:
 
-[LinkeIn](https://www.linkedin.com/in/jesus-quijada-7a4243284/)
+[LinkedIn](https://www.linkedin.com/in/jesus-quijada-7a4243284/)
