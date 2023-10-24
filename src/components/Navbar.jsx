@@ -1,8 +1,10 @@
 import React from 'react'
 import CartWidget from './CartWidget'
 import { Menu,MenuButton,MenuList,MenuItem,Flex,Box,Spacer } from '@chakra-ui/react'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
+
   return (
     <div>
 
@@ -10,41 +12,52 @@ const Navbar = () => {
 
   <Box p='4' bg='red.400'>
      {/* brand */}
-     <h1>60815</h1>
+     <Link to={"/"}>
+     <h1>Heladeria JR</h1>
+     </Link>
+     
   </Box>
 
 <Spacer/>
 <Box>
 <Menu>
+    
   <MenuButton>
-    Categorias 
+    Helados
   </MenuButton>
   <MenuList>
-    <MenuItem>Categoria A</MenuItem>
-    <MenuItem>Categoria B</MenuItem>
-    <MenuItem>Categoria C</MenuItem>
-    <MenuItem>Categoria D</MenuItem>
-    <MenuItem>Categoria E</MenuItem>
+
+    <MenuItem>
+    <Link to={`/category/${"Chocolates negros"}`}> Chocolates negros</Link>
+    </MenuItem>
+
+    <MenuItem><Link to={`/category/${"Helados de crema"}`}>Helados de crema</Link>
+    </MenuItem>
+
+    <MenuItem><Link to={`/category/${"Muy Dulces"}`}>Muy Dulces</Link>
+    </MenuItem>
+    
+    <MenuItem><Link to={`/category/${"Cremas blancas"}`}>Cremas blancas</Link>
+    </MenuItem>
   </MenuList>
+    
 </Menu>
 </Box>
   
   <Spacer />
   <Box p='4' bg='green.400'>
     {/* Carrito */}
+    <NavLink to={"/Cart"}>
     <CartWidget />
+    </NavLink>
+      
+    
   </Box>
 </Flex>
 
-
-
-
-
-     
-      
       
       </div>
   )
-}
+  }
 
 export default Navbar
